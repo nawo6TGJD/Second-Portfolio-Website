@@ -109,6 +109,24 @@ nav ul li a:hover::after{
 
   }
 
+
+  #sidemenu li a {
+   display: inline-block; /* Required for transform */
+   transition: transform 0.3s ease;
+ }
+ 
+ #sidemenu li a:hover {
+   animation: bounce 0.5s;
+   animation-fill-mode: both;
+ }
+ 
+ @keyframes bounce {
+   0%   { transform: translateY(0); }
+   30%  { transform: translateY(-5px); }
+   60%  { transform: translateY(3px); }
+   100% { transform: translateY(0); }
+ }
+ 
  /*--------------------------about--------------------------*/
 
  #about{
@@ -309,14 +327,44 @@ nav ul li a:hover::after{
     margin-top: 50px;
  }
 
- .services-list div{
-    background: #262626;
-    padding: 40px;
-    font-size: 13px;
-    font-weight: 300;
-    border-radius: 15px;
-    transition: background 0.5s, transform 0.5s;
+ .services-list div {
+   background: #0b0b0b;
+   padding: 40px;
+   font-size: 13px;
+   font-weight: 300;
+   border-radius: 15px;
+   transition: background 0.5s, transform 0.5s, box-shadow 0.5s;
+   position: relative;
+   overflow: hidden;
+   border: 2px solid transparent;
+   box-shadow: 0 0 15px #ff004f88, 0 0 25px #ff004f44;
+   background-clip: padding-box;
  }
+
+ .services-list div:hover {
+   background: #ff004f;
+   transform: translateY(-10px);
+   box-shadow: 0 0 20px #ff004f, 0 0 40px #ff004f, 0 0 60px #ff004f;
+   border-color: #ff004f;
+ }
+ 
+ @keyframes borderGlow {
+   0% {
+     box-shadow: 0 0 10px #ff004f, 0 0 20px #ff004f;
+   }
+   50% {
+     box-shadow: 0 0 20px #ff004f, 0 0 40px #ff004f;
+   }
+   100% {
+     box-shadow: 0 0 10px #ff004f, 0 0 20px #ff004f;
+   }
+ }
+ 
+ .services-list div {
+   animation: borderGlow 3s infinite ease-in-out;
+ }
+ 
+ 
 
  .services-list div i{
     font-size: 50px;
@@ -337,7 +385,7 @@ display: inline-block;
 }
 
 .services-list div:hover{
-    background: #ff004f;
+    background: #cf0711;
     transform: translateY(-10px);
 }
 
