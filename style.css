@@ -108,7 +108,25 @@ nav ul li a:hover::after{
    color:#000000;
 
   }
-
+  #sidemenu li {
+    opacity: 0;
+    transform: translate(50px, 20px); /* start right + below */
+    animation: flyInRightUp 0.6s ease forwards;
+  }
+  
+  #sidemenu li:nth-child(1) { animation-delay: 0.4s; }
+  #sidemenu li:nth-child(2) { animation-delay: 0.6s; }
+  #sidemenu li:nth-child(3) { animation-delay: 0.8s; }
+  #sidemenu li:nth-child(4) { animation-delay: 0.8s; }
+  #sidemenu li:nth-child(5) { animation-delay: 1.5s; }
+  
+  @keyframes flyInRightUp {
+    to {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+  
 
   #sidemenu li a {
    display: inline-block; /* Required for transform */
@@ -219,7 +237,7 @@ nav ul li a:hover::after{
  
  @keyframes typing {
    from { width: 0; }
-   to { width: 210px; }
+   to { width: 250px; }
  }
  
  @keyframes blink {
@@ -293,7 +311,7 @@ nav ul li a:hover::after{
  /* Typing effect with blinking cursor */
  .typing-glow {
    color: #fff;
-   font-family: 'Courier New', Courier, monospace;
+   font-family: MontserratRaleway;
    font-size: 16px;
    border-right: 3px solid #610d0d;
    white-space: normal;
@@ -467,15 +485,22 @@ display: inline-block;
    width: fit-content;
    border: 1px solid #ff004f;
    padding: 14px 50px;
+   background-color: #ff004f;
    border-radius: 6px;
    text-decoration: none;
    color: #fff;
-   transition: background 0.5s;
+   box-shadow: 0 0 30px #c60606;
+   transition: box-shadow 0.3s ease, background-color 0.3s ease;
 
 }
 
 .btn:hover{
-   background: #ff004f;
+  background-color: #ff004f; /* Slightly darker green */
+  box-shadow:
+    0 0 5px #dce3dc,
+    0 0 20px #d38e05,
+    0 0 30px #540b0b,
+    0 0 40px #e10e0e;
 }
 
 /*------------------contact------------------------*/
