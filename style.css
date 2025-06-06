@@ -105,7 +105,7 @@ nav ul li a:hover::after{
 }
 
 .header-text h1 span{
-   color:#320514;
+   color:#000000;
 
   }
 
@@ -164,12 +164,12 @@ nav ul li a:hover::after{
  }
 
  .glow {
-   color: #ebe8e6;
+   color: #874519;
    text-shadow: 
      0 0 5px #fff8fa,
-     0 0 10px #a2dd2b,
+     0 0 10px #081fcc,
      0 0 20px #eae8e8,
-     0 0 30px #817d83;
+     0 0 30px #010d0f;
    animation: glowPulse 2.5s ease-in-out infinite;
  }
  
@@ -266,7 +266,7 @@ nav ul li a:hover::after{
    padding: 20px;
    margin-top: 30px;
    border-radius: 10px;
-   box-shadow: 0 0 10px #beff18, 0 0 20px #1ad490, 0 0 30px #8fc223;
+   box-shadow: 0 0 10px #ffffff, 0 0 20px #f1f1f1, 0 0 30px #ac2f09;
    max-width: 700px;
    margin-bottom: 40px;
    background-color: rgba(0, 0, 0, 0.2);
@@ -277,7 +277,7 @@ nav ul li a:hover::after{
    color: #fff;
    font-family: 'Courier New', Courier, monospace;
    font-size: 16px;
-   border-right: 3px solid #a2d019;
+   border-right: 3px solid #610d0d;
    white-space: normal;
    overflow: hidden;
    max-width: 0;
@@ -512,28 +512,49 @@ display: inline-block;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ #floating-circles {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   pointer-events: none;
+   overflow: hidden;
+   z-index: 9999;
+ }
+ 
+ .circle {
+   position: absolute;
+   width: 10px;
+   height: 10px;
+   background-color: rgba(0, 0, 0, 0.56);
+   border-radius: 50%;
+   box-shadow:
+     0 0 10px 4px #00ffff,
+     0 0 20px 8px #0408dd,
+     0 0 30px 12px #00ffff;
+   animation: floatUp 10s linear infinite;
+   opacity: 0.9;
+ }
+ 
+ /* Random positioning and animation delays */
+ .circle:nth-child(1) { left: 10%; animation-delay: 0s; }
+ .circle:nth-child(2) { left: 30%; animation-delay: 2s; }
+ .circle:nth-child(3) { left: 50%; animation-delay: 4s; }
+ .circle:nth-child(4) { left: 70%; animation-delay: 6s; }
+ .circle:nth-child(5) { left: 90%; animation-delay: 8s; }
+ 
+ @keyframes floatUp {
+   0% {
+     transform: translateY(100vh) scale(1);
+     opacity: 1;
+   }
+   100% {
+     transform: translateY(-10vh) scale(0.5);
+     opacity: 0;
+   }
+ }
+ 
 
  
 /* ---------------------CSS for small screens ------------------------------*/
