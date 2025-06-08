@@ -330,6 +330,76 @@ nav ul li a:hover::after{
    50% { border-color: transparent }
  }
  
+
+
+
+ /*------------------------Skills---------------------*/
+
+ .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.skill {
+
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.skill span {
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  display: block;
+  color: #ce1d1d6f;
+}
+
+.bar {
+  background: #0a0101;
+  border-radius: 30px;
+  height: 12px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  width: 0;
+  border-radius: 30px;
+  animation: fillBar 1.8s ease forwards;
+}
+
+/* Colors per skill - target by nth-child or better add classes */
+
+.skills-grid .skill:nth-child(1) .fill { background: #e44d26; } /* HTML - orange */
+.skills-grid .skill:nth-child(2) .fill { background: #264de4; } /* CSS - blue */
+.skills-grid .skill:nth-child(3) .fill { background: #f0db4f; } /* JS - yellow */
+.skills-grid .skill:nth-child(4) .fill { background: #306998; } /* Python - blue */
+.skills-grid .skill:nth-child(5) .fill { background: #61dafb; } /* React - light blue */
+.skills-grid .skill:nth-child(6) .fill { background: #3c873a; } /* Node.js - green */
+.skills-grid .skill:nth-child(7) .fill { background: #0db7ed; } /* Docker - cyan */
+.skills-grid .skill:nth-child(8) .fill { background: #f1502f; } /* Git - orange/red */
+.skills-grid .skill:nth-child(9) .fill { background: #007acc; } /* TypeScript - blue */
+.skills-grid .skill:nth-child(9) span { color: #007acc; }
+
+.skills-grid .skill:nth-child(10) .fill { background: #b07219; } /* Java - brown */
+.skills-grid .skill:nth-child(10) span { color: #b07219; }
+
+.skills-grid .skill:nth-child(11) .fill { background: #6db33f; } /* Spring Boot - green */
+.skills-grid .skill:nth-child(11) span { color: #6db33f; }
+
+.skills-grid .skill:nth-child(12) .fill { background: #e38c00; } /* SQL - orange */
+.skills-grid .skill:nth-child(12) span { color: #e38c00; }
+
+.skills-grid .skill:nth-child(13) .fill { background: #4db33d; } /* MongoDB - green */
+.skills-grid .skill:nth-child(13) span { color: #4db33d; }
+
+.skills-grid .skill:nth-child(14) .fill { background: #777bb3; } /* PHP - purple */
+.skills-grid .skill:nth-child(14) span { color: #777bb3; }
+
+
+
  
 
  /*------------------------Services----------------------*/
