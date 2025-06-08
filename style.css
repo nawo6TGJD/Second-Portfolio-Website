@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins',sans-serif;
+   font-family: Arial, sans-serif;
     box-sizing: border-box;
 }
 
@@ -33,7 +33,8 @@ nav{
 
 
 .logo{
-    width:140px ;
+    width:100px ;
+
 }
 
 nav ul li{
@@ -66,8 +67,10 @@ nav ul li a:hover::after{
     width: 100%;
 }
 
+
+
 .header-text{
-    margin-top: 20%;
+    margin-top: 10%;
     font-size: 30px;
     opacity: 0;
     transform: translateY(20px);
@@ -79,6 +82,7 @@ nav ul li a:hover::after{
    display: inline-block;
    transition: transform 0.7s ease;
    cursor: pointer;
+   gap: 20px;
 }
 
 /* Hover the inner div to move text horizontally */
@@ -87,7 +91,11 @@ nav ul li a:hover::after{
     transform: translateX(30px);
 }
 
-
+.header-text-inner p,
+.header-text-inner h1 {
+   margin: 0; /* reset default */
+   margin-bottom: 20px; /* spacing between lines */
+}
 
 
 @keyframes fadeSlideIn {
@@ -100,12 +108,14 @@ nav ul li a:hover::after{
 .header-text h1{
   font-family: 60px;  
   margin-top: 20px;
+  font-size: 30px;
 
 
 }
 
 .header-text h1 span{
-   color:#000000;
+   color:#2e0707;
+   font-size: 85px;
 
   }
   #sidemenu li {
@@ -144,7 +154,48 @@ nav ul li a:hover::after{
    60%  { transform: translateY(3px); }
    100% { transform: translateY(0); }
  }
- 
+
+
+  /*--------------------------floating Icons--------------------------*/
+.floating-icons {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none; /* THIS is key — ignore all mouse interaction */
+}
+
+/* All icons float automatically, ignore mouse */
+.floating-icons i {
+  position: absolute;
+  font-size: 40px;
+  opacity: 0.7;
+  animation: floatIcon 4s ease-in-out infinite;
+  color: currentColor;
+  filter: drop-shadow(0 0 10px currentColor);
+  pointer-events: none; /* Icons themselves ignore mouse */
+}
+
+/* Icon placement and color */
+.icon1 { bottom: 13cm; right: 29cm; color: #e74c3c; }
+.icon2 { bottom: 9cm; right: 23cm; color: #b07219; }
+.icon3 {  bottom: 2cm; right: 30cm; color: #0175c2; }
+.icon4 { bottom: 13cm; right: 30cm; color: #2ecc71; }
+
+/* Floating animation */
+@keyframes floatIcon {
+  0%, 100% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+}
+
+
+  
  /*--------------------------about--------------------------*/
 
  #about{
@@ -193,63 +244,88 @@ nav ul li a:hover::after{
    color: #ebe8e6;
    text-shadow: 
      0 0 5px #ff004f,
-     0 0 10px #ff004f,
+     0 0 10px #f4eff1,
      0 0 20px #ff6699,
      0 0 30px #ff6699;
    animation: glowPulse 1s ease-in-out infinite;
  }
 
  .glow {
-   color: #874519;
+   color: #c90a0a;
    text-shadow: 
-     0 0 5px #fff8fa,
-     0 0 10px #081fcc,
+     0 0 5px #2a030e,
+     0 0 10px #e1e1dd,
      0 0 20px #eae8e8,
-     0 0 30px #010d0f;
+     0 0 30px #ffffff;
    animation: glowPulse 2.5s ease-in-out infinite;
  }
  
  
- @keyframes glowPulse {
-   0%, 100% {
-     text-shadow: 
-       0 0 5px #00ffff,
-       0 0 10px #ff004f,
-       0 0 20px #9b0e84,
-       0 0 30px #cbe73d;
-   }
-   50% {
-     text-shadow: 
-       0 0 10px #64670f,
-       0 0 20px #ff004f,
-       0 0 30px #95b70e,
-       0 0 40px #ff6699;
-   }
- }
- 
- .typing {
-   overflow: hidden;
-   white-space: nowrap;
-   border-right: 2px solid #0e0e0e;
-   animation: typing 5s steps(20) forwards, blink 0.7s step-end infinite;
-   width: 0;
- }
- 
- @keyframes typing {
+@keyframes subtitleGlow {
+  0%, 100% {
+    text-shadow: 
+      0 0 5px #ec799e,
+      0 0 10px #e943c8,
+      0 0 20px #d4ff66,
+      0 0 30px #ff6699;
+  }
+  50% {
+    text-shadow: 
+      0 0 5px #ff66a3,
+      0 0 10px #ece2e7,
+      0 0 20px #c4db11,
+      0 0 30px #ebe4e7;
+  }
+}
+
+/* Header Glow Animation */
+@keyframes headerGlow {
+  0%, 100% {
+    text-shadow: 
+      0 0 5px #ccffe5,
+      0 0 10px #00ffa1,
+      0 0 20px #ff00aa,
+      0 0 30px #00b894;
+  }
+  50% {
+    text-shadow: 
+      0 0 5px #66ffcc,
+      0 0 10px #33ffc9,
+      0 0 20px #00ffc3,
+      0 0 30px #00b894;
+  }
+}
+.typing {
+   overflow: hidden;           /* hide overflow for typing effect */
+   white-space: nowrap;        /* keep text in one line */
+   border-right: 2px solid #0e0e0e;  /* cursor effect */
+   animation: typing 4s steps(25) forwards, blink 0.7s step-end infinite;
+   width: 0;                   /* start hidden */
+   display: inline-block;      /* needed for width to work */
+}
+
+@keyframes typing {
    from { width: 0; }
-   to { width: 250px; }
- }
- 
- @keyframes blink {
+   to { width: 150px; }  /* adjust width if needed to fit text exactly */
+}
+
+@keyframes blink {
    50% { border-color: transparent; }
- }
- 
+}
+
 
  .tab-tittles{
     display: flex;
     margin: 20px 0 40px;
 
  }
+ #job-title {
+  font-size: 30px;
+  font-weight: bold;   /* fullstack */
+  color: #ff004f;
+  transition: all 0.5s ease;
+}
+
 
  .tab-links{
     margin-right: 50px;
@@ -331,7 +407,10 @@ nav ul li a:hover::after{
  }
  
 
-
+h2 {
+  font-size: 25px; /* Change this to your desired size */
+  color: #fff; /* Optional: change text color */
+}
 
  /*------------------------Skills---------------------*/
 
@@ -342,10 +421,9 @@ nav ul li a:hover::after{
 }
 
 .skill {
-
   border-radius: 10px;
   padding: 15px 20px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
 .skill span {
@@ -370,37 +448,138 @@ nav ul li a:hover::after{
   animation: fillBar 1.8s ease forwards;
 }
 
-/* Colors per skill - target by nth-child or better add classes */
+/* Glowing borders and fill color */
+.skills-grid .skill:nth-child(1) .bar {
+  box-shadow: 0 0 12px #e44d26;
+}
+.skills-grid .skill:nth-child(1) .fill {
+  width: 100%;
+  background: #e44d26;
+}
 
-.skills-grid .skill:nth-child(1) .fill { background: #e44d26; } /* HTML - orange */
-.skills-grid .skill:nth-child(2) .fill { background: #264de4; } /* CSS - blue */
-.skills-grid .skill:nth-child(3) .fill { background: #f0db4f; } /* JS - yellow */
-.skills-grid .skill:nth-child(4) .fill { background: #306998; } /* Python - blue */
-.skills-grid .skill:nth-child(5) .fill { background: #61dafb; } /* React - light blue */
-.skills-grid .skill:nth-child(6) .fill { background: #3c873a; } /* Node.js - green */
-.skills-grid .skill:nth-child(7) .fill { background: #0db7ed; } /* Docker - cyan */
-.skills-grid .skill:nth-child(8) .fill { background: #f1502f; } /* Git - orange/red */
-.skills-grid .skill:nth-child(9) .fill { background: #007acc; } /* TypeScript - blue */
-.skills-grid .skill:nth-child(9) span { color: #007acc; }
+.skills-grid .skill:nth-child(2) .bar {
+  box-shadow: 0 0 12px #264de4;
+}
+.skills-grid .skill:nth-child(2) .fill {
+  width: 95%;
+  background: #264de4;
+}
 
-.skills-grid .skill:nth-child(10) .fill { background: #b07219; } /* Java - brown */
-.skills-grid .skill:nth-child(10) span { color: #b07219; }
+.skills-grid .skill:nth-child(3) .bar {
+  box-shadow: 0 0 12px #f0db4f;
+}
+.skills-grid .skill:nth-child(3) .fill {
+  width: 90%;
+  background: #f0db4f;
+}
 
-.skills-grid .skill:nth-child(11) .fill { background: #6db33f; } /* Spring Boot - green */
-.skills-grid .skill:nth-child(11) span { color: #6db33f; }
+.skills-grid .skill:nth-child(4) .bar {
+  box-shadow: 0 0 12px #306998;
+}
+.skills-grid .skill:nth-child(4) .fill {
+  width: 85%;
+  background: #306998;
+}
 
-.skills-grid .skill:nth-child(12) .fill { background: #e38c00; } /* SQL - orange */
-.skills-grid .skill:nth-child(12) span { color: #e38c00; }
+.skills-grid .skill:nth-child(5) .bar {
+  box-shadow: 0 0 12px #61dafb;
+}
+.skills-grid .skill:nth-child(5) .fill {
+  width: 80%;
+  background: #61dafb;
+}
 
-.skills-grid .skill:nth-child(13) .fill { background: #4db33d; } /* MongoDB - green */
-.skills-grid .skill:nth-child(13) span { color: #4db33d; }
+.skills-grid .skill:nth-child(6) .bar {
+  box-shadow: 0 0 12px #3c873a;
+}
+.skills-grid .skill:nth-child(6) .fill {
+  width: 75%;
+  background: #3c873a;
+}
 
-.skills-grid .skill:nth-child(14) .fill { background: #777bb3; } /* PHP - purple */
-.skills-grid .skill:nth-child(14) span { color: #777bb3; }
+.skills-grid .skill:nth-child(7) .bar {
+  box-shadow: 0 0 12px #0db7ed;
+}
+.skills-grid .skill:nth-child(7) .fill {
+  width: 70%;
+  background: #0db7ed;
+}
+
+.skills-grid .skill:nth-child(8) .bar {
+  box-shadow: 0 0 12px #f1502f;
+}
+.skills-grid .skill:nth-child(8) .fill {
+  width: 85%;
+  background: #f1502f;
+}
+
+.skills-grid .skill:nth-child(9) .bar {
+  box-shadow: 0 0 12px #007acc;
+}
+.skills-grid .skill:nth-child(9) .fill {
+  width: 90%;
+  background: #007acc;
+}
+.skills-grid .skill:nth-child(9) span {
+  color: #007acc;
+}
+
+.skills-grid .skill:nth-child(10) .bar {
+  box-shadow: 0 0 12px #b07219;
+}
+.skills-grid .skill:nth-child(10) .fill {
+  width: 85%;
+  background: #b07219;
+}
+.skills-grid .skill:nth-child(10) span {
+  color: #b07219;
+}
+
+.skills-grid .skill:nth-child(11) .bar {
+  box-shadow: 0 0 12px #6db33f;
+}
+.skills-grid .skill:nth-child(11) .fill {
+  width: 80%;
+  background: #6db33f;
+}
+.skills-grid .skill:nth-child(11) span {
+  color: #6db33f;
+}
+
+.skills-grid .skill:nth-child(12) .bar {
+  box-shadow: 0 0 12px #e38c00;
+}
+.skills-grid .skill:nth-child(12) .fill {
+  width: 70%;
+  background: #e38c00;
+}
+.skills-grid .skill:nth-child(12) span {
+  color: #e38c00;
+}
+
+.skills-grid .skill:nth-child(13) .bar {
+  box-shadow: 0 0 12px #4db33d;
+}
+.skills-grid .skill:nth-child(13) .fill {
+  width: 75%;
+  background: #4db33d;
+}
+.skills-grid .skill:nth-child(13) span {
+  color: #4db33d;
+}
+
+.skills-grid .skill:nth-child(14) .bar {
+  box-shadow: 0 0 12px #777bb3;
+}
+.skills-grid .skill:nth-child(14) .fill {
+  width: 80%;
+  background: #777bb3;
+}
+.skills-grid .skill:nth-child(14) span {
+  color: #777bb3;
+}
 
 
-
- 
 
  /*------------------------Services----------------------*/
 

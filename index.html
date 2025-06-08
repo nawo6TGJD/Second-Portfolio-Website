@@ -6,6 +6,7 @@
   <title>second portfolio</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/e6effb866f.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -20,9 +21,15 @@
     <div id="header">
         <div class="container">
 <nav>
-  <img src="images/logo.png" class="logo">
+
+    
+  <div class="floating-icons">
+  <i class="fa-solid fa-code icon4"></i>
+</div>
+
+  <img src="images/lo.png" class="logo">
   <ul  id="sidemenu">
-    <li><a href="#">Home</a></li>
+    <li><a href="#" >Home</a></li>
     <li><a href="#">About</a></li>
     <li><a href="#">Services</a></li>
     <li><a href="#">Portfolio</a></li>
@@ -32,12 +39,30 @@
   <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
 
 </nav> 
+
 <div class="header-text">
   <div class="header-text-inner">
-    <p class="typing"> Software Engineer</p>
-    <h1 >Hi, I'm <span class="glow"> Nawodya</span> <br> Wijesekara from Sri Lanka</h1>
+   <!-- <p class="typing"> Software Engineer</p> -->
+<h2 class="typing">Hello I'm ..</h2>
+<h1><span  class="glow"> Nawodya</span></h1>
+    <h1 ><span class="glow"> Wijesekara  </span>from Sri Lanka</h1>
+<h2>
+  A skilled   <span id="job-title"> full-stack developer </span> <br>
+  in building robust web and mobile platforms
+</h2>
+
+
+ 
+    
+ 
+
   </div>
+
+
 </div>
+
+
+
 
   </div>
 </div>
@@ -61,6 +86,7 @@
           </p>
         </div>
         
+
 
 <div class="tab-tittles">
   <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -104,6 +130,7 @@
 
 <div id="skillss">
   <div class="container">
+    
 <h1 class="sub-title">My Skills</h1>
 
 <div class="skills-grid">
@@ -358,6 +385,27 @@ document.getElementById(tabname).classList.add("active-tab");
   function closemenu() {
     sidemenu.style.right = "-200px";
   }
+
+
+const titles = [
+    { text: "Front-end developer", color: "#e74c3c", size: "44px" },
+    { text: "Back-end developer", color: "#e74c3c", size: "36px" },
+    { text: "Full-stack developer", color: "#e74c3c", size: "40px" }
+  ];
+
+  let index = 0;
+  const jobTitle = document.getElementById("job-title");
+
+  function updateJobTitle() {
+    const current = titles[index];
+    jobTitle.textContent = current.text;
+    jobTitle.style.color = current.color;
+    jobTitle.style.fontSize = current.size;
+
+    index = (index + 1) % titles.length;
+  }
+
+  setInterval(updateJobTitle, 2000); // every 2 seconds
 </script>
 
 </body>
