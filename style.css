@@ -587,6 +587,118 @@ h2 {
   color: #777bb3;
 }
 
+/* 15 – Singing */
+.skills-grid .skill:nth-child(15) .bar {
+  box-shadow: 0 0 12px #ff69b4;   /* hot‑pink glow */
+}
+.skills-grid .skill:nth-child(15) .fill {
+  width: 65%;                     /* adjust to taste */
+  background: #ff69b4;
+}
+.skills-grid .skill:nth-child(15) span {
+  color: #ff69b4;
+}
+
+/* 16 – Dancing */
+.skills-grid .skill:nth-child(16) .bar {
+  box-shadow: 0 0 12px #8a2be2;   /* blue‑violet glow */
+}
+.skills-grid .skill:nth-child(16) .fill {
+  width: 75%;                     /* adjust to taste */
+  background: #8a2be2;
+}
+.skills-grid .skill:nth-child(16) span {
+  color: #8a2be2;
+}
+
+
+ /*---------------------Expereince----------------------*/
+
+
+
+
+
+/* ===== Experience Section ===== */
+.experience-grid {
+  display: grid;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Card style */
+.experience-card {
+  background: #1826bd;
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+  /* Animation setup */
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 0.9s ease forwards;
+}
+
+/* Staggered entry delays */
+.experience-card:nth-child(1) { animation-delay: 0.2s; }
+.experience-card:nth-child(2) { animation-delay: 0.4s; }
+.experience-card:nth-child(3) { animation-delay: 0.6s; }
+.experience-card:nth-child(4) { animation-delay: 0.8s; }
+
+/* Content tweaks */
+.experience-card h3 {
+  margin: 0 0 6px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.experience-card .period,
+.experience-card .live {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #777;
+}
+.experience-card h4 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+}
+.experience-card ul {
+  margin: 0 0 10px 20px;
+  padding: 0;
+  list-style: disc;
+}
+.experience-card .stack {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #555;
+}
+
+/* Fade‑in/up keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* (Optional) Dark‑mode support */
+body.dark .experience-card {
+  background: #1e1e1e;
+  box-shadow: 0 3px 12px rgba(255, 255, 255, 0.05);
+  color: #d71717;
+}
+body.dark .experience-card h4 { color: #3e0202; }
+
+
+
+
+
+
+
+
+
+
+
 
  /*------------------------Services----------------------*/
 
