@@ -448,7 +448,7 @@ h2 {
   animation: fillBar 1.8s ease forwards;
 }
 
-/* Glowing borders and fill color */
+/* ------------1---------------- */
 .skills-grid .skill:nth-child(1) .bar {
   box-shadow: 0 0 12px #e44d26;
 }
@@ -460,7 +460,7 @@ h2 {
   color: #ad6087;
 }
 
-
+/* ------------2---------------- */
 
 .skills-grid .skill:nth-child(2) .bar {
   box-shadow: 0 0 12px #264de4;
@@ -469,6 +469,11 @@ h2 {
   width: 95%;
   background: #264de4;
 }
+.skills-grid .skill:nth-child(2) span {
+  color: #ad6087;
+}
+
+
 
 .skills-grid .skill:nth-child(3) .bar {
   box-shadow: 0 0 12px #f0db4f;
@@ -477,6 +482,11 @@ h2 {
   width: 90%;
   background: #f0db4f;
 }
+.skills-grid .skill:nth-child(3) span {
+  color: #ad6087;
+}
+
+
 
 .skills-grid .skill:nth-child(4) .bar {
   box-shadow: 0 0 12px #306998;
@@ -485,6 +495,11 @@ h2 {
   width: 85%;
   background: #306998;
 }
+.skills-grid .skill:nth-child(4) span {
+  color: #ad6087;
+}
+
+
 
 .skills-grid .skill:nth-child(5) .bar {
   box-shadow: 0 0 12px #61dafb;
@@ -493,6 +508,11 @@ h2 {
   width: 80%;
   background: #61dafb;
 }
+.skills-grid .skill:nth-child(5) span {
+  color: #ad6087;
+}
+
+
 
 .skills-grid .skill:nth-child(6) .bar {
   box-shadow: 0 0 12px #3c873a;
@@ -501,6 +521,11 @@ h2 {
   width: 75%;
   background: #3c873a;
 }
+.skills-grid .skill:nth-child(6) span {
+  color: #ad6087;
+}
+
+
 
 .skills-grid .skill:nth-child(7) .bar {
   box-shadow: 0 0 12px #0db7ed;
@@ -509,6 +534,11 @@ h2 {
   width: 70%;
   background: #0db7ed;
 }
+.skills-grid .skill:nth-child(7) span {
+  color: #ad6087;
+}
+
+
 
 .skills-grid .skill:nth-child(8) .bar {
   box-shadow: 0 0 12px #f1502f;
