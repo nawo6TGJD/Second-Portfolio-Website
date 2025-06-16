@@ -770,6 +770,18 @@ h2 {
   }
 }
 
+@keyframes zoomFloat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+.experience-card {
+  animation: fadeInUp 0.9s ease forwards, zoomFloat 7s ease-in-out infinite;
+}
 
 
  /*------------------------Services----------------------*/
