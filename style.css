@@ -650,74 +650,105 @@ h2 {
  /*---------------------Expereince----------------------*/
 
 
-/* ===== Experience Section (enhanced) ===== */
+/* ===== Dark Neon Experience Section ===== */
 .experience-grid {
   display: grid;
   gap: 30px;
   margin-top: 40px;
 }
 
-/* --- Card base style --- */
+/* --- Base Style Shared by All Cards --- */
 .experience-card {
-  position: relative;                 /* needed for the glow pseudo‑elem */
-  background: #b11919;
-  border-radius: 12px;
+  position: relative;
+  border-radius: 16px;
   padding: 25px 30px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
   color: #fff;
-
-  /* Initial scroll‑reveal animation */
   opacity: 0;
   transform: translateY(40px);
-  animation: fadeInUp 0.9s ease forwards,
-             pulseGlow 6s ease-in-out infinite 1.2s;
+  animation: fadeInUp 0.9s ease forwards;
+  background-size: 300% 300%;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
 }
 
-/* Staggered delays for the scroll‑reveal */
-.experience-card:nth-child(1) { animation-delay: 0.3s, 1.2s; }
-.experience-card:nth-child(2) { animation-delay: 0.5s, 1.4s; }
-.experience-card:nth-child(3) { animation-delay: 0.7s, 1.6s; }
-.experience-card:nth-child(4) { animation-delay: 0.9s, 1.8s; }
+/* === DARK GLOW CARDS === */
 
-/* --- Glow effect (pseudo‑element) --- */
+/* 🌺 Dark Pink (Magenta Glow) */
+.experience-card:nth-child(1) {
+  background: linear-gradient(135deg, #460027, #8c0b53);
+  animation-delay: 0.3s;
+}
+.experience-card:nth-child(1)::after {
+  background: linear-gradient(45deg, #ff4ea5, #ff90d0);
+}
+
+/* 🧡 Deep Orange (Fiery Glow) */
+.experience-card:nth-child(2) {
+  background: linear-gradient(135deg, #3b1a00, #a84900);
+  animation-delay: 0.5s;
+}
+.experience-card:nth-child(2)::after {
+  background: linear-gradient(45deg, #ff6a00, #ffb347);
+}
+
+/* ❤️ Crimson Red (Blood Glow) */
+.experience-card:nth-child(3) {
+  background: linear-gradient(135deg, #2d0000, #800000);
+  animation-delay: 0.7s;
+}
+.experience-card:nth-child(3)::after {
+  background: linear-gradient(45deg, #ff3d3d, #ff7777);
+}
+
+/* 💜 Deep Violet (Mystic Glow) */
+.experience-card:nth-child(4) {
+  background: linear-gradient(135deg, #1a002d, #4e007d);
+  animation-delay: 0.9s;
+}
+.experience-card:nth-child(4)::after {
+  background: linear-gradient(45deg, #b84fff, #e5b3ff);
+}
+
+/* --- Shared Glow Effect --- */
 .experience-card::after {
   content: '';
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(45deg, #ff3d3d, #ff9d2f, #ff3d3d);
   background-size: 300% 300%;
-  filter: blur(14px);
-  opacity: 0.25;                      /* soft idle glow */
-  z-index: -1;                        /* stay behind card */
+  filter: blur(22px);
+  opacity: 0.3;
+  z-index: -1;
   transition: opacity 0.4s, transform 0.4s;
 }
 
-/* Brighter glow on hover / focus */
 .experience-card:hover::after,
 .experience-card:focus-visible::after {
-  opacity: 0.55;
-  transform: scale(1.03);
+  opacity: 0.6;
+  transform: scale(1.05);
 }
 
-/* --- Typography tweaks --- */
+/* --- Text Styling (Glowing and Dark-Friendly) --- */
 .experience-card h3 {
   margin: 0 0 6px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  line-height: 1.3;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff8f9;
+  text-shadow: 0 1px 5px rgba(255, 100, 150, 0.7);
 }
 .experience-card .period,
 .experience-card .live {
   font-weight: 400;
   font-size: 0.9rem;
-  color: #ffecec;
+  color: #ffddee;
+  opacity: 0.85;
 }
 .experience-card h4 {
   margin: 0 0 10px;
   font-size: 1rem;
   font-weight: 500;
-  color: #ffd1d1;
+  color: #ffe8ff;
 }
 .experience-card ul {
   margin: 0 0 10px 20px;
@@ -727,42 +758,17 @@ h2 {
 .experience-card .stack {
   font-size: 0.85rem;
   font-style: italic;
-  color: #ffefef;
+  color: #fcdfff;
+  opacity: 0.85;
 }
 
-/* --- Keyframes --- */
+/* --- Scroll-in Animation --- */
 @keyframes fadeInUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-@keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15); }
-  50%      { box-shadow: 0 4px 20px rgba(255, 70, 70, 0.45); }
-}
-
-/* (Optional) Dark‑mode override */
-body.dark .experience-card {
-  background: #1e1e1e;
-  color: #fbdcdc;
-}
-body.dark .experience-card::after {
-  filter: blur(20px);
-  opacity: 0.35;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
