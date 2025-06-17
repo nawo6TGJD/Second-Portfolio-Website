@@ -733,6 +733,11 @@ h2 {
   font-size: 1rem;
 }
 
+.stack-icons span:hover i {
+  transform: scale(1.2);
+  color: #0b0b0b;
+  filter: drop-shadow(0 0 6px rgba(255, 59, 47, 0.9));
+}
 
 /* === DARK GLOW CARDS === */
 
