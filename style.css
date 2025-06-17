@@ -702,7 +702,36 @@ h2 {
   font-size: 1rem;
 }
 
+/* === 2CARDS === */
 
+.stack-icons {
+  display: flex;
+  justify-content: flex-end; /* aligns icons to the right */
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #ffecec;
+}
+
+.stack-icons span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.stack-icons span:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.stack-icons i {
+  font-size: 1rem;
+}
 
 
 /* === DARK GLOW CARDS === */
