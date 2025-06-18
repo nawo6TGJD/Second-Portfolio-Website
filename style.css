@@ -413,17 +413,18 @@ h2 {
 }
 
 .education-card {
-  background-color: #000; /* Black background */
-  border-radius: 12px;
-  padding: 20px 30px;
+  background-color: #000;
+  border-radius: 10px;
+  padding: 15px 20px;
+  max-width: 350px;
   margin-top: 20px;
-  box-shadow: 0 0 20px red; /* Red glowing effect */
-  color: #fff; /* White text */
-  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 12px red;
+  color: #fff;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .education-card:hover {
-  box-shadow: 0 0 30px 5px red; /* Stronger glow on hover */
+  box-shadow: 0 0 20px 4px red;
 }
 
 .education-card ul {
@@ -433,16 +434,23 @@ h2 {
 }
 
 .education-card li {
-  margin-bottom: 15px;
-  font-size: 16px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .education-card span {
-  display: block;
-  font-weight: bold;
-  font-size: 18px;
-  margin-bottom: 5px;
-  color: #ff4d4d; /* Red accent text */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #ff4d4d;
+}
+
+.education-card i {
+  color: #ff4d4d;
+  min-width: 20px;
 }
 
 
