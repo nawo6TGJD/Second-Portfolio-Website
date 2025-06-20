@@ -113,6 +113,38 @@ nav ul li a:hover::after{
 
 }
 
+/*glow card -----------------------------------*/
+.glow-card {
+  background: #000000;
+  border: 2px solid rgba(255, 0, 0, 0.996);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.4),
+              0 0 16px rgba(255, 0, 0, 0.3);
+  display: inline-block;         /* keeps the card close to text size */
+  margin-top: 20px;
+  transition: box-shadow 0.4s ease;
+}
+
+.glow-card:hover {
+  box-shadow: 0 0 14px rgba(255, 40, 40, 0.7),
+              0 0 28px rgba(255, 0, 0, 0.5);
+}
+
+.glow-card h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.glow-card span#job-title {
+  color: #ff4a4a;
+  font-weight: 600;
+}
+
+
+
 .header-text h1 span{
    color:#2e0707;
    font-size: 85px;
