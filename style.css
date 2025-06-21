@@ -116,18 +116,18 @@ nav ul li a:hover::after{
 /*glow card -----------------------------------*/
 .glow-card {
   background: #000000;
-  border: 2px solid rgba(255, 0, 0, 0.996);
+  border: 2px solid rgba(39, 1, 1, 0.996);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 8px rgb(154, 2, 2),
-              0 0 16px rgba(255, 0, 0, 0.3);
+  box-shadow: 0 0 8px rgb(154, 2, 3),
+              0 0 16px rgba(255, 0, 0, 3.3);
   display: inline-block;         /* keeps the card close to text size */
   margin-top: 20px;
-  transition: box-shadow 0.4s ease;
+  transition: box-shadow 0.8s ease;
 }
 
 .glow-card:hover {
-  box-shadow: 0 0 14px rgba(255, 40, 40, 0.7),
+  box-shadow: 0 0 14px rgb(4, 0, 0),
               0 0 28px rgba(255, 0, 0, 0.5);
 }
 
@@ -149,7 +149,7 @@ nav ul li a:hover::after{
   margin-right: 6px;
   font-size: 1.1rem;
   vertical-align: middle;
-  filter: drop-shadow(0 0 4px rgb(25, 0, 255));
+  filter: drop-shadow(0 0 4px rgb(4, 4, 4));
 }
 
 .header-text h1 span{
